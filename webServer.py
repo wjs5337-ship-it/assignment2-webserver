@@ -20,15 +20,6 @@ def webServer(port=13331):
   message = connectionSocket.recv(1024)
 
   print(f"message: {message}")
-  print(len(message))
-
-  connectionSocket.send(b"HTTP/1.1 200 OK\r\n\r\n")
-  # connectionSocket.send(b"HTTP/1.1 404 Not Found\r\n\r\n")
-  connectionSocket.send(b"Hello")
-  # connectionSocket.send(b"<html><head>")
-  # connectionSocket.send(b"</head><body>")
-  # connectionSocket.send(b"<h1>")
-  # connectionSocket.send(b"Content-Type: text/html; charset=UTF-8\r\n\r\n")
 
   connectionSocket.close()  # closing the connection socket
 
